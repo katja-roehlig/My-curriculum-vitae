@@ -7,26 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Katja Roehlig">
     <meta name="description" content="Lebenslauf Katja Roehlig">
-    <title> Lebenslauf Katja Röhlig</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
+<title> Lebenslauf Katja Röhlig</title>
 
 <body>
-    <header>
+    <header class="header-style">
         <h1>Katja Röhlig</h1>
-        <p>Frontend Developer</p>
+        <p id="profession">Frontend Developer</p>
 
         <nav>
-            <ul>
-                <li><a href="#profile">Profil</a></li>
-                <li><a href="#experience">Praktische Erfahrung</a></li>
-                <li><a href="#education">Ausbildung</a></li>
-                <li><a href="#skills">Qualifikation</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
+            <a href="#profile" class="nav-style" id="test">Profil</a>
+            <a href="#experience" class="nav-style">Praktische Erfahrung</a>
+            <a href="#education" class="nav-style">Ausbildung</a>
+            <a href="#skills" class="nav-style">Qualifikation</a>
+            <a href="#contact" class="nav-style">Kontakt</a>
         </nav>
     </header>
 
-    <main>
+    <main class="main-style">
         <article>
             <h2 id="profile">Profil</h2>
             <p>Ich vereine Kreativtät mit einer logisch-analytischen Herangehensweise.
@@ -41,25 +41,25 @@
                 Ideen und Konzepte ein und entwickle daraus andere Perspektiven, Ideen, Theorien und Konzepte.</p>
 
         </article>
-        <article>
+        <article class="between-article">
             <h2 id="experience">Praktische Erfahrung</h2>
-            <section>
+            <section class="between-section">
                 <header>
                     <h3>Bootcamp Web Developer, Coding Bootcamps Europe</h3>
                     <p>seit 08/2022</p>
                 </header>
                 <p>Ausbildung zur Frontend-Entwicklerin mit HTML, CSS, Java Script und GIT-Workflow</p>
             </section>
-            <br>
-            <section>
+
+            <section class="between-section">
                 <header>
                     <h3>Lehrerin an Grundschulen in Leipzig</h3>
                     <p>02/2019 - 09/2021</p>
                 </header>
                 <p>Unterricht in Mathemathik und Kunst, Lernstandsanalye, Konzeption von Unterrichtsmaterialien.</p>
             </section>
-            <br>
-            <section>
+
+            <section class="between-section">
                 <header>
                     <h3>Selbstständige Tätigkeit als Redakteurin und Autorin für Schulbücher</h3>
                     <p>02/2013 - 01/2019</p>
@@ -70,16 +70,16 @@
                 </p>
                 <p>Inzwischen sind über 30 erfolgreiche von mir betreute Werke erschienen.</p>
             </section>
-            <br>
-            <section>
+
+            <section class="between-section">
                 <header>
                     <h3>Volontariat Ernst Klett Grundschulverlag, Leipzig</h3>
                     <p>01/2012 - 01/2013</p>
                 </header>
                 <p>Einblicke in die Abläufe, Planungen und Strategien eines großen Unternehmens</p>
             </section>
-            <br>
-            <section>
+
+            <section class="between-section">
                 <header>
                     <h3>Vorbereitungsdienst für Grund- und Hauptschullehramt, Ulm</h3>
                     <p>02/2010 - 07/2011</p>
@@ -88,9 +88,9 @@
             </section>
         </article>
 
-        <article>
+        <article class="between-article">
             <h2 id="education">Ausbildung</h2>
-            <section>
+            <section class="between-section">
                 <header>
                     <h3>Studium Lehramt an Grundschulen, Universität Regensburg</h3>
                     <p>04/2003 - 07/2009</p>
@@ -101,9 +101,10 @@
                 </p>
             </section>
         </article>
-        <article id="skills">
-            <h2>Qualifikation</h2>
-            <section>
+
+        <article class="between-article">
+            <h2 id="skills">Qualifikation</h2>
+            <section class="between-section">
                 <h3>Soft Skills</h3>
                 <ul>
                     <li>Zuverlässigkeit</li>
@@ -113,7 +114,8 @@
                     <li>Leistungsbereitschaft</li>
                 </ul>
             </section>
-            <section>
+
+            <section class="between-section">
                 <h3>IT-Fähigkeiten</h3>
                 <ul>
                     <li>HTML 5</li>
@@ -123,17 +125,20 @@
                 </ul>
             </section>
         </article>
-        <adress id="contact">
-            <h2>Kontakt</h2>
-            <ol>
-                <li><a href="mailto:katja-roehlig@mail.de">Mail schreiben</a></li>
-                <li><a href="tel: 0179 3713046">Anruf</a></li>
-            </ol>
+        <address class="between-article">
+            <h2 id="contact">Kontakt</h2>
+            <p>
+                <button type="button" class="nav-style">
+                    <a href="mailto:katja-roehlig@mail.de" class="contact-link">Mail schreiben</a>
+                </button>
 
-        </adress>
+                <button type="button" class="nav-style">
+                    <a href="tel: 0179 3713046" class="contact-link">Anruf</a>
+                </button>
+            </p>
+        </address>
 
     </main>
-
 
 </body>
 

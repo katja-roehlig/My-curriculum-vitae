@@ -1,0 +1,124 @@
+/*document styling*/
+
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: rgb(174, 13, 126);
+  color: rgb(243, 224, 229);
+}
+
+body {
+  margin: 0px;
+}
+
+/*Font-Styling*/
+
+@font-face {
+  font-family: "HindSiliguri";
+  src: url("fonts/Hind_Siliguri/HindSiliguri-Light.ttf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "HindSiliguri";
+  src: url("fonts/Hind_Siliguri/HindSiliguri-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "HindSiliguri";
+  src: url("fonts/Hind_Siliguri/HindSiliguri-SemiBold.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "HindSiliguri";
+  src: url("fonts/Hind_Siliguri/HindSiliguri-Regular.ttf");
+  font-weight: 400;
+}
+
+html {
+  font-family: "HindSiliguri";
+  font-weight: 200;
+}
+
+h1 {
+  font-family: "HindSiliguri", sans-serif;
+  margin-bottom: -10px;
+}
+
+h2 {
+  font-family: "HindSiliguri", sans-serif;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "HindSiliguri", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  color: indigo;
+}
+
+/* classes*/
+
+.header-style {
+  text-align: center;
+  background-color: rgb(180, 171, 194);
+  color: indigo;
+  padding: 50px 15px;
+}
+
+.main-style {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: rgb(243, 224, 229);
+}
+
+.nav-style {
+  padding: 10px;
+  color: rgb(174, 13, 126);
+}
+
+.between-article {
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 2px solid rgb(180, 171, 194);
+}
+
+.between-section {
+  margin-top: 30px;
+}
+
+.contact-link {
+  color: rgb(174, 13, 126);
+}
+
+/*ids*/
+#contact {
+  font-style: normal;
+}
+
+#profession::after {
+  content: " 👀";
+}
+
+/* special selectors */
+
+.nav-style:visited {
+  color: rgb(106, 105, 109);
+}
+
+.nav-style:hover {
+  background-color: rgb(174, 13, 126);
+  color: rgb(243, 224, 229);
+}
+.nav-style:active {
+  color: indigo;
+}
