@@ -1,7 +1,11 @@
-/*document styling*/
+/* Document styling **************************************************************************************************************************** */
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
 }
 
 *::selection {
@@ -9,11 +13,15 @@
   color: rgb(243, 224, 229);
 }
 
-body {
-  margin: 0px;
+address {
+  all: unset;
 }
 
-/*Font-Styling*/
+hr {
+  width: 10em;
+  border: 1px solid white;
+}
+/* font-styling ******************************************************************************************************************************** */
 
 @font-face {
   font-family: "HindSiliguri";
@@ -38,15 +46,16 @@ body {
   src: url("fonts/Hind_Siliguri/HindSiliguri-Regular.ttf");
   font-weight: 400;
 }
-
 html {
   font-family: "HindSiliguri";
   font-weight: 200;
+  font-size: 16px;
 }
 
 h1 {
   font-family: "HindSiliguri", sans-serif;
-  margin-bottom: -10px;
+  margin-bottom: 0.1em;
+  color: rgb(236, 192, 203);
 }
 
 h2 {
@@ -57,68 +66,199 @@ h2 {
 h3 {
   font-family: "HindSiliguri", sans-serif;
   font-weight: 400;
+  margin-bottom: 0;
 }
 
-h1,
 h2,
 h3 {
   color: indigo;
 }
 
-/* classes*/
-
-.header-style {
-  text-align: center;
-  background-color: rgb(180, 171, 194);
-  color: indigo;
-  padding: 50px 15px;
+/* classes ************************************************************************************************************************************************* */
+.footer {
+  max-width: 90ch;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: rgb(243, 224, 229);
+  border-top: 3px solid white;
 }
 
-.main-style {
-  max-width: 900px;
+.header {
+  text-align: center;
+  background-image: linear-gradient(#550aaa 25%, #aa1f81, #aa1f81aa);
+  color: rgb(180, 171, 194);
+  padding: 2em 1em 1.5em 1em;
+  position: relative;
+}
+
+.main {
+  max-width: 90ch;
   margin: 0 auto;
-  padding: 15px;
-  background-color: rgb(243, 224, 229);
+  padding: 2rem 1rem;
+  background-color: #f3e0e5;
+  border-top: 3px solid white;
+  line-height: 1.7rem;
 }
 
 .nav-style {
-  padding: 10px;
-  color: rgb(174, 13, 126);
+  padding: 0.4em;
+  margin-left: 1em;
+  color: indigo;
 }
 
 .between-article {
-  padding-top: 30px;
-  margin-top: 30px;
-  border-top: 2px solid rgb(180, 171, 194);
+  padding-top: 1.9rem;
+  margin-top: 1.9rem;
+  border-top: 3px solid white;
 }
 
 .between-section {
-  margin-top: 30px;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
 }
 
 .contact-link {
   color: rgb(174, 13, 126);
 }
+.hire-me {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  background: indigo;
+  color: rgb(243, 224, 229);
+  padding: 0.8rem;
+  border: 1px solid white;
+}
 
-/*ids*/
+.position-heading {
+  position: relative;
+  left: -1rem;
+}
+
+.time {
+  border: 1px solid white;
+  padding: 0.05rem 0.4rem;
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: rgb(174, 13, 126);
+  background-color: #ffffff44;
+}
+
+.header-style {
+  font-size: 2.4rem;
+}
+
+.subheader-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer {
+  max-width: 90ch;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  border-top: 3px solid white;
+  background-image: linear-gradient(#aa1f81aa, #aa1f81, #550aaa 75%);
+  text-align: center;
+}
+
+.button {
+  background-color: color rgb(236, 192, 203);
+  padding: 0.3em 0.8em 0.3em 0.8em;
+  border-radius: 0.3em;
+  margin: 0.5em 0.2em;
+}
+
+/* ids ****************************************************************************************************************************************************** */
 #contact {
-  font-style: normal;
+  color: rgb(236, 192, 203);
+}
+
+#nav {
+  display: flex;
+  flex-direction: column;
+}
+
+#profession {
+  font-size: 0.6em;
+  margin-top: 0em;
+  color: rgb(240, 155, 178);
+}
+
+/* special selectors *************************************************************************************************************************************** */
+
+.nav-style:hover {
+  background-color: indigo;
+  color: rgb(243, 224, 229);
+}
+.nav-style:active {
+  color: rgb(236, 192, 203);
 }
 
 #profession::after {
   content: " 👀";
 }
 
-/* special selectors */
-
-.nav-style:visited {
-  color: rgb(106, 105, 109);
+main > article {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+main > address {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-.nav-style:hover {
-  background-color: rgb(174, 13, 126);
-  color: rgb(243, 224, 229);
+/* media-queries ****************************************************************************************************************************** */
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+
+  #nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .subheader-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .time {
+    font-size: 0.8em;
+  }
+
+  .skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .main {
+    padding: 2rem 2rem;
+  }
 }
-.nav-style:active {
-  color: indigo;
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+
+  .hire-me {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  /* .between-article {
+    padding-top: 2.2em;
+    margin-top: 2.2em;
+    border-top: 3px solid white;
+  }*/
+}
+
+@media print {
+  .hire-me,
+  #nav {
+    display: none;
+  }
 }
