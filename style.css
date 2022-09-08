@@ -6,11 +6,17 @@
 
 body {
   margin: 0px;
+  background-image: linear-gradient(
+    90deg,
+    var(--main-bg-color),
+    var(--gradient-color) 50%,
+    var(--main-bg-color)
+  );
 }
 
 *::selection {
-  background-color: rgb(174, 13, 126);
-  color: rgb(243, 224, 229);
+  background-color: var(--time-color);
+  color: var(--border-color);
 }
 
 address {
@@ -19,8 +25,23 @@ address {
 
 hr {
   width: 10em;
-  border: 1px solid white;
+  border: 1px solid var(--border-color);
 }
+/* custom-properties *************************************************************************************************************************** */
+
+:root {
+  --text-color: black;
+  --subheader-color: indigo;
+  --main-bg-color: #f3e0e5;
+  --border-color: white;
+  --time-color: #ae0d7e;
+  --header-color: #ecc0cb;
+  --profession-color: #f09bb2;
+  --border-color-transparent: #ffffff44;
+  --time-color-transparent: #aa1f81aa;
+  --gradient-color: #9a86b1;
+}
+
 /* font-styling ******************************************************************************************************************************** */
 
 @font-face {
@@ -55,7 +76,7 @@ html {
 h1 {
   font-family: "HindSiliguri", sans-serif;
   margin-bottom: 0.1em;
-  color: rgb(236, 192, 203);
+  color: var(--header-color);
 }
 
 h2 {
@@ -71,23 +92,15 @@ h3 {
 
 h2,
 h3 {
-  color: indigo;
+  color: var(--subheader-color);
 }
 
 /* classes ************************************************************************************************************************************************* */
-.footer {
-  max-width: 90ch;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  background-color: rgb(243, 224, 229);
-  border-top: 3px solid white;
-}
 
 .header {
   text-align: center;
-  background-image: linear-gradient(#550aaa 25%, #aa1f81, #aa1f81aa);
-  color: rgb(180, 171, 194);
-  padding: 2em 1em 1.5em 1em;
+  background-image: linear-gradient(#550aaa 25%, #aa1f81, #aa1f81aa 90%);
+  padding: 1.5em 1em 1.5em 1em;
   position: relative;
 }
 
@@ -95,21 +108,22 @@ h3 {
   max-width: 90ch;
   margin: 0 auto;
   padding: 2rem 1rem;
-  background-color: #f3e0e5;
-  border-top: 3px solid white;
+  background-color: var(--main-bg-color);
+  border-top: 3px solid var(--border-color);
   line-height: 1.7rem;
 }
 
 .nav-style {
   padding: 0.4em;
   margin-left: 1em;
-  color: indigo;
+  color: var(--subheader-color);
+  transition: transform 0.3s ease-in;
 }
 
 .between-article {
   padding-top: 1.9rem;
   margin-top: 1.9rem;
-  border-top: 3px solid white;
+  border-top: 3px solid var(--border-color);
 }
 
 .between-section {
@@ -118,16 +132,16 @@ h3 {
 }
 
 .contact-link {
-  color: rgb(174, 13, 126);
+  color: var(--time-color);
 }
 .hire-me {
   position: absolute;
   top: 1.5rem;
   right: 2.5rem;
-  background: indigo;
-  color: rgb(243, 224, 229);
+  background: var(--subheader-color);
+  color: var(--main-bg-color);
   padding: 0.8rem;
-  border: 1px solid white;
+  border: 1px solid var(--border-color);
 }
 
 .position-heading {
@@ -136,43 +150,48 @@ h3 {
 }
 
 .time {
-  border: 1px solid white;
+  border: 1px solid var(--border-color);
   padding: 0.05rem 0.4rem;
   margin-top: 0.5em;
   font-size: 0.9em;
-  color: rgb(174, 13, 126);
-  background-color: #ffffff44;
+  color: var(--time-color);
+  background-color: var(--border-color-transparent);
 }
 
 .header-style {
   font-size: 2.4rem;
+  transition: color 0.3ms ease;
 }
 
 .subheader-flex {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: baseline;
 }
 
 .footer {
-  max-width: 90ch;
+  /*max-width: 90ch;*/
   margin: 0 auto;
   padding: 2rem 1rem;
-  border-top: 3px solid white;
-  background-image: linear-gradient(#aa1f81aa, #aa1f81, #550aaa 75%);
+  border-top: 3px solid var(--border-color);
+  background-image: linear-gradient(#aa1f81aa, #aa1f81, #550aaa 85%);
   text-align: center;
 }
 
 .button {
-  background-color: color rgb(236, 192, 203);
-  padding: 0.3em 0.8em 0.3em 0.8em;
+  background-color: var(--main-bg-color);
+  padding: 0.4em 0.9em 0.4em 0.9em;
   border-radius: 0.3em;
-  margin: 0.5em 0.2em;
+  margin: 0.5em 0.3em;
+  border: 1px solid var(--header-color);
+  transition: transform 0.3s ease-in;
+  transition: background-color 0.3s ease;
 }
 
 /* ids ****************************************************************************************************************************************************** */
 #contact {
-  color: rgb(236, 192, 203);
+  color: var(--header-color);
 }
 
 #nav {
@@ -183,21 +202,33 @@ h3 {
 #profession {
   font-size: 0.6em;
   margin-top: 0em;
-  color: rgb(240, 155, 178);
+  color: var(--profession-color);
 }
 
 /* special selectors *************************************************************************************************************************************** */
 
 .nav-style:hover {
-  background-color: indigo;
-  color: rgb(243, 224, 229);
+  background-color: var(--subheader-color);
+  color: var(--main-bg-color);
+  transform: scale(1.2);
 }
 .nav-style:active {
-  color: rgb(236, 192, 203);
+  color: var(--header-color);
 }
-
 #profession::after {
   content: " 👀";
+}
+h1:hover {
+  color: #bcb175;
+}
+
+#profession:hover {
+  color: #bcb175;
+}
+
+.button:hover {
+  transform: scale(1.2);
+  background-color: #bcb175;
 }
 
 main > article {
@@ -213,7 +244,7 @@ main > address {
 
 @media screen and (min-width: 768px) {
   html {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   #nav {
@@ -234,13 +265,13 @@ main > address {
     grid-template-columns: 1fr 2fr;
   }
   .main {
-    padding: 2rem 2rem;
+    padding: 1.8rem 1.8rem;
   }
 }
 
 @media screen and (min-width: 992px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .hire-me {
